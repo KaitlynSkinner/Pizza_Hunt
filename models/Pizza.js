@@ -25,3 +25,16 @@ const Pizza = model('Pizza', PizzaSchema);
 
 // export the Pizza model
 module.exports = Pizza;
+
+
+// MOCK DATA - POST DATA
+// {
+//     "pizzaName": "The Demo Pizza",
+//     "createdBy": "Kaitlyn",
+//     "size": "Personal",
+//     "toppings": [
+//         "Green Olives",
+//         "Tomato Slices",
+//         "Black Olives"
+//     ]
+// }
