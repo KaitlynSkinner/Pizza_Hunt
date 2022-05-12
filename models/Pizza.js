@@ -5,10 +5,14 @@ const { Schema, model } = require('mongoose');
 // Data to be stored when users create a new pizza (name of pizza, name of user that created pizza, timestamp of when the pizza was created, timestamp of any updates to pizza's data, pizza's suggested size, and pizza's toppings)
 const PizzaSchema = new Schema({
     pizzaName: { 
-        type: String 
+        type: String,
+        required: true,
+        trim: true
     },
     createdBy: { 
-        type: String 
+        type: String, 
+        required: true,
+        trim: true
     },
     createdAt: {
         type: Date,
@@ -17,6 +21,9 @@ const PizzaSchema = new Schema({
     },
     size: {
         type: String,
+        required: true,
+        // enum = enumerable - refers to a set of data that can be iterated over - much like using the for...in loop to iterate through an object
+        enum: ['Personal', 'Small', 'Medium', 'Large', 'Extra Large'],
         default: 'Large'
     },
     toppings: [],
